@@ -21,9 +21,9 @@ class LorenzAttractorModel:
         self.dt = dt
         self.max_points = max_points
 
-        self.x = 0.0
-        self.y = 0.0
-        self.z = 0.1
+        self.x = 1.0
+        self.y = 1.0
+        self.z = 5.0
         self.is_paused = False
         self.projection = "XZ"  # Доступные проекции: "XZ", "XY", "YZ"
         self.trail: List[Tuple[float, float, float]] = [(self.x, self.y, self.z)]
