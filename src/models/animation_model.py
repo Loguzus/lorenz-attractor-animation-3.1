@@ -14,7 +14,7 @@ class LorenzAttractorModel:
         dt: float = 0.008,
         max_points: int = 1800,
     ) -> None:
-        """Инициализирует начальное состояние (0; 0; 0.1) и параметры системы."""
+        """Инициализирует начальное состояние (1; 1; 5) и параметры системы."""
         self.sigma = sigma
         self.r = r
         self.b = b
@@ -72,7 +72,7 @@ class LorenzAttractorModel:
 
     def reset(self) -> None:
         """Сбрасывает траекторию в начальную точку."""
-        self.x, self.y, self.z = 0.0, 0.0, 0.1
+        self.x, self.y, self.z = 1.0, 1.0, 5.0
         self.trail = [(self.x, self.y, self.z)]
 
     def set_preset(self, sigma: float, r: float, b: float) -> None:
